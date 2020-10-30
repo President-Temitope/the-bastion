@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Upgrading &mdash; The Bastion 3.00.00 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/thebastion.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="The Bastion 3.00.00 documentation" href="../index.html"/>
+        <link rel="up" title="Installation &amp; Setup" href="index.html"/>
+        <link rel="next" title="Sandbox using Docker" href="docker.html"/>
+        <link rel="prev" title="Advanced Installation" href="advanced.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Bastion
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.00.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../presentation/index.html">Presentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation &amp; Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic.html">Basic Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html">Advanced Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Upgrading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-upgrade-instructions">General upgrade instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-specific-upgrade-instructions">Version-specific upgrade instructions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#v3-00-00">v3.00.00</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Sandbox using Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Running Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../using/index.html">Using the bastion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins/index.html">Bastion plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Bastion</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Installation &amp; Setup</a> &raquo;</li>
+        
+      <li>Upgrading</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/upgrading.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="upgrading">
+<h1>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-upgrade-instructions">
+<h2>General upgrade instructions<a class="headerlink" href="#general-upgrade-instructions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Update the code, if you're using <code class="docutils literal"><span class="pre">git</span></code>, you can checkout the latest tag:</li>
+</ul>
+<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="o">(</span> <span class="nb">umask</span> <span class="m">0022</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /opt/bastion <span class="o">&amp;&amp;</span> git fetch <span class="o">&amp;&amp;</span> git checkout <span class="k">$(</span>git tag <span class="p">|</span> tail -1<span class="k">)</span> <span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Run the install script in upgrade mode, so it can make adjustments to the system needed for the new version:</li>
+</ul>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>/opt/bastion/bin/admin/install --upgrade
+</pre></div>
+</div>
+<p>Note that if you're using a infrastructure automation tool such as Puppet, Ansible, Chef, and don't want the update script to touch some files that you manage yourself, you can use <code class="docutils literal"><span class="pre">--upgrade-managed</span></code>. See the <code class="docutils literal"><span class="pre">--help</span></code> for a more fine-grained upgrade path if needed.</p>
+<ul class="simple">
+<li>Install any missing newly needed system package:</li>
+</ul>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>/opt/bastion/bin/admin/packages-check.sh
+</pre></div>
+</div>
+<ul class="simple">
+<li>Check the configuration for new parameters or options you may want to adjust</li>
+</ul>
+<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="k">for</span> f in /opt/bastion/etc/bastion/*.dist<span class="p">;</span> <span class="k">do</span> vimdiff <span class="nv">$f</span> /etc/bastion/<span class="k">$(</span>basename <span class="nv">$f</span> .dist<span class="k">)</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you have some power-users and you want them to have access to any new restricted plugin this new version might have, you can run for those accounts:</li>
+</ul>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>/opt/bastion/bin/admin/grant-all-restricted-commands-to.sh ACCOUNTNAME
+</pre></div>
+</div>
+<p>Note that this is done automatically for bastion admins.</p>
+</div>
+<div class="section" id="version-specific-upgrade-instructions">
+<h2>Version-specific upgrade instructions<a class="headerlink" href="#version-specific-upgrade-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="v3-00-00">
+<h3>v3.00.00<a class="headerlink" href="#v3-00-00" title="Permalink to this headline">¶</a></h3>
+<p>Initial public version, no specific upgrade instructions</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docker.html" class="btn btn-neutral float-right" title="Sandbox using Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advanced.html" class="btn btn-neutral" title="Advanced Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, OVHcloud.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.00.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
